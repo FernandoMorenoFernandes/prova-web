@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/static/img/favicon.png">
     <title>Tela inicial</title>
 </head>
+
 <body>
+
     <header>
-        <a><img src="logo.png"></a>
+        <img src="/static/img/logo.jpg">
         <nav>
             <ul>
                 <li><a href="*">Produtos</a></li>
@@ -16,35 +19,209 @@
             </ul>
         </nav>
     </header>
+
     <main>
+
         <aside>
 
+            <h3> Canais sobre educação financeira </h3>
+            <ul>
+                <li>
+                    <a href="https://www.youtube.com/@MePoupe" target="_blank">Me Poupe</a>
+                </li>
+
+                <li>
+                    <a href="https://www.youtube.com/@EconoMirna" target="_blank">EconoMirna</a>
+                </li>
+
+                <li>
+                    <a href="https://www.youtube.com/@jovensdenegocios" target="_blank">Jovens de Negócios</a>
+                </li>
+
+                <li>
+                    <a href="https://www.youtube.com/@ClubedoValor" target="_blank">Clube do Valor</a>
+                </li>
+
+            </ul>
+
+            <h3> Sites de Investimento </h3>
+            <ul>
+
+                <li>
+                    <a href="https://www.bb.com.br/site/investimentos/tesouro-direto/?gclid=Cj0KCQjw98ujBhCgARIsAD7QeAgx2GEoWDQweNWZZ3BBIyKrF_T6ZP_dLzjxyUn8Erh8w9Q176DrZocaAv-pEALw_wcB" target="_blank">BB Investimentos</a>
+                </li>
+
+                <li>
+                    <a href="https://www.rico.com.vc/produtos/tesouro-direto?campaignid=316171546&adgroupid=55392294370&feeditemid=&targetid=aud-437331571629:dsa-19959388920&loc_interest_ms=&loc_physical_ms=1001767&matchtype=&network=g&device=c&devicemodel=&ifmobile=&ifmobile=0&ifsearch=1&ifsearch=&ifcontent=0&ifcontent=&creative=340508776292&keyword=&placement=&target=&utm_source=google&utm_medium=cpc&utm_term=&utm_campaign=GGLE_PESQ_DSA&hsa_tgt=aud-437331571629:dsa-19959388920&hsa_net=adwords&hsa_kw=&hsa_grp=55392294370&hsa_acc=7134496929&hsa_ver=3&hsa_ad=340508776292&hsa_cam=316171546&hsa_mt=&hsa_src=g&gclid=Cj0KCQjw98ujBhCgARIsAD7QeAhzE_RFZqF4VWmRaXMGxqgbl0QBesFxskhLBMU11FCgAaklUQFqToEaAtN1EALw_wcB" target="_blank">Rico</a>
+                </li>
+
+                <li>
+                    <a href="https://www.nuinvest.com.br/investir-tesouro-direto.html" target="_blank">Nu Invest</a>
+                </li>
+
+            </ul>    
+
+            <h3> Site Oficial  do Tesouro Direto </h3>
+            <ul>
+
+                <li>
+                    <a href="https://www.gov.br/tesouronacional/pt-br" target="_blank">Tesouro Nacional</a>
+                </li>
+
+            </ul>
+            
+            <h3> Regulamentação do Tesouro Direto </h3>
+            <ul>
+
+                <li>
+                    <a href="https://www.tesourotransparente.gov.br/temas/divida-publica-federal/tesouro-direto" target="_blank">Tesouro Transparente</a>
+                </li>
+
+                <li>
+                    <a href="https://www.b3.com.br/pt_br/regulacao/estrutura-normativa/regulamentos-e-manuais/tesouro-direto.htm" target="_blank">B3 Bolsa de valores</a>
+                </li>
+
+            </ul>
+
         </aside>
+
         <div class="container">
+
             <div class="container-header">
+
                 <a href="/produto/novo?id=0&receita=1">Cadastrar receita</a>
                 <a href="/produto/novo?id=0&receita=0">Cadastrar despesa</a>
                 <button onclick="load()" id="calcula-total">Calcular total</button>
-                <h3 id="total">{{total}}</h3>
-                
-                
+                <h3 id="total">{{total}}</h3>  
+
             </div>
+
             <div class="produtos-wrapper">
+
                 {% for item in itens %}
+
                     <div class= "produtos">
+
                         <p>Nome: {{item.nome}}</p>
                         <p>Preço: {{item.preco}}</p>
+
                         <div style="display:flex;gap:6px">
+
                             <a href="/produto/novo?id={{item.id}}&receita={{item.is_receita}}">Atualizar</a>
                             <a href="/produto/excluir?id={{item.id}}">Excluir</a>
-                        </div>
-                        
-                    </div>    
+
+                        </div> 
+
+                    </div>   
+
                 {% endfor %}
+
+            </div>
+
+            <div class="texto">
+
+                <h1> O que são finanças pessoais? </h1>
+
+                <p> Finanças pessoais é o nome de um método específico de gestão financeira, e seu principal objetivo é aplicar a teoria e a prática   financeiras aos negócios financeiros de uma única pessoa ou de um único núcleo familiar. Em outras palavras, o campo nos permite entender como as pessoas usam o dinheiro e se organizam em relação a ele. </p>
+                     
+                <p> As finanças pessoais nada mais são do que a pesquisa e a prática de aplicativos que auxiliam no gerenciamento de despesas de indivíduos e até de grupos familiares. Esses despesas podem ser: </p>
+
+                <ul>
+                    <li>
+                        Essenciais: como moradia, alimentação, transporte, saúde, educação, etc;
+                    </li>
+
+                    <li>    
+                        Desejos pessoais: envolvendo mais despesas extras, como roupas da moda ou telefones celulares, etc;
+                    </li>
+
+                    <li>
+                        Investimento ou pagamento de dívida: a categoria que se concentra em alcançar objetivos financeiros.
+                    </li>
+                </ul>
+
+            </div>
+
+            <div id="financas">
+
+                <img src="/static/img/o_que_sao_financas_pessoais_v2.png" alt="Imagen_finanças">
+
+            </div>
+
+            <div class="texto">
+            
+                <h1> Organizar melhor suas finanças pessoais </h1>
+
+                <h3> A seguir estão algumas dicas práticas para organizar finanças pessoais: </h3>
+
+                <ul>
+                    <li>
+                        Conheça as práticas do seu banco: saiba quais taxas são cobradas, quais receitas você pode obter, etc. Isso o ajudará a avaliar se é possível mudar para uma instituição financeira com melhores condições;
+                    </li>
+                    
+                    <li>
+                        Avalie a real necessidade de múltiplos cartões de crédito: Como dissemos, o uso indevido de cartões de crédito é um erro muito comum. Você é uma das pessoas com mais de um cartão? Que tal focar tudo em um provedor de crédito e solicitar um limite mais alto? Essa mudança permite um melhor controle e facilita a redução dessas transações financeiras;
+                    </li>
+
+                    <li>
+                        Crie um orçamento total e sub orçamentos: saiba exatamente quanto dinheiro está disponível e para que deve ser usado, e separe cada tipo de despesa. Por exemplo, você pode fazer uma lista de compras de supermercado dentro de um determinado valor e segui-la para evitar compras por impulso;
+                    </li>
+
+                    <li>
+                        Procure fornecedores com preços mais atrativos: Você pode se surpreender com a qualidade de outras empresas que cobram tarifas mais baixas pelos mesmos produtos e serviços. A "lealdade" a certas marcas também é um hábito das estratégias de marketing muito propício à exploração do mercado.
+                    </li>
+                </ul>        
+
+                <h1 id="investir"> Aprenda como é importante economizar e investir </h1>
+
+                <p> Até agora, tudo o que dissemos é muito prático, mas pode não funcionar se você não educar sobre como economizar e investir. </p>
+
+                <p> Basicamente, você tem que economizar porque não pode prever o futuro e investir para que o dinheiro economizado possa se tornar ativo e gerar mais receita - essa combinação pode ajudá-lo a obter segurança financeira e fornecer uma rede de proteção em caso de emergência. Aqui estão algumas razões para trabalhar nesta direção: </p>
+
+                <ul>
+                    <li>
+                        Amortecedor de emergência: circunstâncias imprevistas podem ocorrer para qualquer pessoa, como a necessidade de se aposentar, problemas de saúde e desemprego. É bom ter uma reserva de caixa de emergência para não precisar de empréstimos com juros altos, certo?
+                    </li>
+                    
+                    <li>
+                        Longevidade: com o avanço da medicina e da saúde pública, a expectativa de vida no Brasil vem aumentando a cada ano.
+                        Aposentar-se: você planeja se aposentar um dia, certo? Você precisará de economias e investimentos para repor a renda que não ganha mais com o trabalho;
+                    </li>
+
+                    <li>
+                        A volatilidade da seguridade social: a seguridade social nunca pretendeu ser a principal fonte de renda, mas deve ser vista como um complemento. As mudanças demográficas indicam que continuará a realizar reformas no futuro. Claro, quando você ficar velho, não vai querer depender apenas dela!
+                    </li>
+                </ul>
+
+            </div>
+        
+        </div>  
+
+    </main>
+    
+    <footer>
+
+        <div class="footer-container">
+            <div class="logo">
+                <img src="/static/img/Logo_footer.png" alt="Logo da Empresa">
+            </div>
+
+            <div class="email">
+                <a href="mailto:contato@empresa.com">contato@empresa.com</a>
+            </div>
+
+            <div class="social-media">
+                <a href="#" target="_blank"><img src="/static/img/icons8-facebook-48.png" alt="Facebook"></a>
+                <a href="#" target="_blank"><img src="/static/img/icons8-twitter-48.png" alt="Twitter"></a>
+                <a href="#" target="_blank"><img src="/static/img/icons8-instagram-48.png" alt="Instagram"></a>
+                <a href="#" target="_blank"><img src="/static/img/icons8-telegram-app-48.png" alt="Telegram"></a>
+                <a href="#" target="_blank"><img src="/static/img/icons8-youtube-48.png" alt="Youtube"></a>
+            </div>
+
+            <div class="date">
+                <p>&copy; 2023 - Todos os direitos reservados</p>
             </div>
         </div>
-    </main>
-    <footer>
 
     </footer>
     
@@ -97,17 +274,45 @@
     }
 
     aside {
-        width: 200px;
-        height: 100vh;
+        width: 450px;
+        min-width: 300px;
+        height: auto ;
         background-color: rgb(233, 54, 0);
     }
 
-    footer {
-        height: 140px;
-        background-color: black;
-        width: 100%;
+    aside h3 {
+        color: #fff;
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 50px;
     }
 
+    aside ul {
+        text-align: center;
+        list-style-type: disc;  
+    }
+
+    aside ul li {
+        margin-top: 40px;
+        
+    }
+
+    aside a {
+        color: #fff;
+    }
+
+    aside a:link, a:visited {
+	    text-decoration: none
+	}
+
+    aside a:hover {
+	text-decoration: underline;
+	color: black;
+	}
+
+    aside a:active {
+	text-decoration: none
+	}
 
     header nav ul {
         list-style: none;
@@ -123,6 +328,7 @@
     .container {
         width: 100%;
     }
+
     .container-header {
         display: flex;
         padding: 24px;
@@ -166,5 +372,85 @@
         width: 100%;
         padding: 8px 18px;
     }
+
+    .texto {
+        text-indent: 2%;
+        font-size: 13pt;
+        text-align: justify;
+        line-height: 1.8;
+        margin: 0 auto;
+        max-width: 1000px;
+        padding: 20px; 
+    }
+
+    .texto p {
+        line-height: 2.0;   
+    }
+
+    .texto ul {
+        margin-top: 20px;
+    }
+
+    .texto ul li {
+        line-height: 2.0;
+        margin-top: 10px;
+    }
+
+    h1 {
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    #investir {
+        margin-top: 60px;
+        margin-bottom: 15px;
+    }
+
+    #financas {
+       display: flex;
+       justify-content: center;
+       align-items: center; 
+    }
+
+    #financas img{
+        width: 1000px;
+        height: 400px;
+        margin-top: 20px;
+        margin-bottom: 20px; 
+    }
+
+    footer {
+        background-color: black;
+        padding: 20px;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .logo img {
+        height: 50px;
+        margin: 30px;
+    }
+
+    .social-media a {
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    .email a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .date p {
+        color: #fff;
+        margin-top: 10px;
+    }
+/* */
 </style>
 </html>
